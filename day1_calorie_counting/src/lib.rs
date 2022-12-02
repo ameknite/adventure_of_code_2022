@@ -6,7 +6,7 @@ pub fn data() -> String {
 
 pub fn part1(data: &str) -> u32 {
     data.split("\n\n")
-        .map(|elf| elf.lines().map(|food| food.parse::<u32>().unwrap()).sum())
+        .map(|elf| elf.lines().flat_map(|food| food.parse::<u32>()).sum())
         .max()
         .unwrap()
 }
@@ -14,8 +14,8 @@ pub fn part1(data: &str) -> u32 {
 pub fn part2(data: &str) -> u32 {
     let mut v = data
         .split("\n\n")
-        .map(|elf| elf.lines().map(|food| food.parse::<u32>().unwrap()).sum())
-        .collect::<Vec<u32>>();
+        .map(|elf| elf.lines().flat_map(|food| food.parse::<u32>()).sum())
+        .collect::<Vec<_>>();
     v.sort_unstable();
     v.iter().rev().take(3).sum()
 }
