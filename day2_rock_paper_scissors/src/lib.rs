@@ -4,6 +4,8 @@ pub fn data() -> String {
     fs::read_to_string("input.txt").unwrap().trim().to_string()
 }
 
+// --- Day 2: Rock Paper Scissors ---
+
 enum Move {
     Rock = 1,
     Paper = 2,

@@ -4,6 +4,8 @@ pub fn data() -> String {
     fs::read_to_string("input.txt").unwrap()
 }
 
+// --- Day 1: Calorie Counting ---
+
 pub fn part1(data: &str) -> u32 {
     data.split("\n\n")
         .map(|elf| elf.lines().flat_map(|food| food.parse::<u32>()).sum())
