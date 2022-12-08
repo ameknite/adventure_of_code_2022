@@ -13,7 +13,6 @@ pub fn input() -> Result<String, Box<dyn Error>> {
 
 // Advent of Code 2022
 // --- Day 7: No Space Left On Device ---
-
 struct MyFile {
     name: String,
     size: u32,
