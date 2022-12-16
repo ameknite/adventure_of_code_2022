@@ -1,1 +1,1 @@
-# adventure_of_code_2022
+# Adventure of Code 2022
